@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: url("./bg.jpg");
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    width: 900px;
+    height: 500px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 2px 2px 8px #696969; 
+}
+
+.heading{
+    text-align: center;
+    margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+    box-shadow: 1px 1px 4px rgb(228, 228, 228);
+    width: 100%;
+}
+
+h1{
+    padding-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 2px rgb(54, 54, 54);
+    font-weight: normal;
+}
+
+.user-choice {
+    display: grid;
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "year month day"
+    "btn btn btn";
+}
+
+#yearDropDown{
+    grid-area: year;
+}
+#monthDropDown{
+    grid-area: month;
+    margin: auto;
+}
+#dayDropDown{
+    grid-area: day;
+    margin-left: auto;
+    
+}
+
+select:focus{
+    outline: none;
+}
+
+.btn-ret{
+    grid-area: btn;
+    margin: auto;
+    border: 2px solid #028bb4;
+    background-color: #02b1e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.btn-ret:hover{
+    background-color: #039cca;
+}
+
+.output{
+    display: grid;
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "home away"
+    "win lose"
+    "venue venue";
+    grid-gap: 5px;
+    margin-top: 20px !important;
+}
+
+#home {
+    grid-area: home;
+}
+#away {
+    grid-area: away;
+}
+#win {
+    grid-area: win;
+}
+#lose {
+    grid-area: lose;
+}
+#venue {
+    grid-area: venue;
+}
+
+.btns
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin-top: 20px !important;
+    padding: 5px;
+    margin: auto;
+    grid-gap: 5px;
+}
+
+.btns a{
+    margin: auto;
+    border: 2px solid #028bb4;
+    background-color: #02b1e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.btns a:hover{
+    background-color: #039cca;
+}
+
+p{
+    font-size: 18px;
+}
+select{
+    font-size: 18px;
+    border: none;
+    width: 150px;
+    height: 40px;
+}
+
+input[type=text]{
+    
+    font-size: 18px;
+    border: none;
+    border-left: 3px solid #028bb4;
+    border-bottom: 1px solid #028bb4;
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+}
+
+input[type=text]:focus{
+    outline: none;
+}
+
+#alertbox{
+    position: absolute;
+    background: #F31431;
+    padding: 25px;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+}
+
+.display{
+    display: none;
+}

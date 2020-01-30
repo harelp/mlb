@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Project 1 - Harel</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="content">
+    <section class="heading">
+        <h1>mlb database</h1>
+    </section>
+    <section class="user-choice">
+            <select id="yearDropDown">
+                <option disabled selected>Select Year</option>
+            </select>
+            <select id="monthDropDown" onchange="monthChange();">
+                <option disabled selected>Select Month</option>
+            </select>
+            <select id="dayDropDown">
+                <option disabled selected>Select Day</option>
+            </select>
+        <a class="btn-ret" onclick="getGameData()">Retrieve Data</a>
+    </section>
+    <section class="output">
+       <p>Home Team: <input type="text" id="home"></p>
+       <p>Away Team: <input type="text"  id="away"></p>
+        <p>Pitchers(win):<input type="text" id="win"></p>
+       <p>Pitchers(lose): <input type="text"  id="lose"></p>
+       <p>Venue: <input type="text" id="venue"></p>
+    </section>
+
+    <section class="btns">
+     <a id="btnPre" type="button" onclick="previousGame()">Previous Game</a>
+     <a id="btnNext" type="button" onclick="nextGame()">Next Game</a>
+     <a type="button">Save Changes</a>
+    </section>
+  </div>
+
+</main>
+
+<div id="alertbox" class="display"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
